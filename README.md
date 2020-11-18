@@ -1,6 +1,6 @@
 # Node js dan Express js basic
-mengulang materi dasar <b>node js</b> dan <b>express js</b><br>
-<b>crash course.</b>
+Mengulang materi dasar <b>node js</b> dan <b>express js</b><br>
+<b>Crash Course.</b>
 <li>file system</li>
 <li>middleware</li>
 <li>get,post,delete request</li>
