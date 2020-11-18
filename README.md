@@ -1,10 +1,9 @@
 # Node js dan Express js basic
-Mengulang materi dasar <b>node js</b> dan <b>express js</b>
+Mengulang materi dasar <b>node js</b> dan <b>express js</b><br>
 <b>crash course.</b>
-1. basic routing
-2. file system
-3. middleware
-4. get,post,delete request
-5. view engine
-6. express route dan
-7. mvc
+<li>file system</li>
+<li>middleware</li>
+<li>get,post,delete request</li>
+<li>view engine</li>
+<li>express route dan</li>
+<li>mvc</li>
