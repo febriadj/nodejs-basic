@@ -3,11 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/views/css/styles.css">
+  <link rel="stylesheet" href="/public/css/styles.css">
+  <link rel="stylesheet" href="/public/css/partials.css">
   <title>Febriadj | <%= title %></title>
 </head>
 <body>
-  <h1>Who am I?</h1>
-  <p>this is about page</p>
+  <%- include ('./partials/navbar.ejs') %>
+  <section>
+    <h1>About Us</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo reiciendis facilis, in nobis hic impedit laudantium nihil at placeat commodi? Accusantium libero aut eum dolore necessitatibus ullam. Voluptates, placeat corrupti?</p>
+  </section>
+  <%- include ('./partials/footer.ejs') %>
 </body>
 </html>

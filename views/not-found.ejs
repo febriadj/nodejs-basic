@@ -3,10 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/views/css/styles.css">
+  <link rel="stylesheet" href="/public/css/styles.css">
+  <link rel="stylesheet" href="/public/css/partials.css">
   <title><%= title %></title>
 </head>
 <body>
-  <h1>Opss!! 404 Not Found</h1>
+  <%- include ('./partials/navbar.ejs') %>
+  <section>
+    <h1>Opss!! 404 Not Found</h1>
+  </section>
+  <%- include ('./partials/footer.ejs') %>
 </body>
 </html>

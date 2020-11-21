@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+nav {
+  width: 100%;
+}
+nav a {
+  color: #000;
+  text-decoration: none;
+}
+#header {
+  margin: 80px 80px 40px 80px;
+  padding: 0 0 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #232323;
+}
+#header #menu a {
+  margin: 0 10px;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+#footer-wrap {
+  text-align: center;
+}

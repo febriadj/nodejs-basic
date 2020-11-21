@@ -3,24 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/views/css/index.css">
+  <link rel="stylesheet" href="/public/css/styles.css">
+  <link rel="stylesheet" href="/public/css/partials.css">
   <title>Febriadj | <%= title %></title>
 </head>
 <body>
-  <nav>
-    <div id="header">
-      <div id="site-title">
-        <a href="/">Febriadj Blog</a>
-      </div>
-      <div id="menu">
-        <a href="/">Blogs</a>
-        <a href="/about">About</a>
-        <a href="/blogs/create">Create Blog</a>
-      </div>
-    </div>
-  </nav>
-
-  <div id="blog">
+  <%- include ('./partials/navbar.ejs') %>
+  <section>
     <div id="blog-wrap">
       <% if (blogs.length > 0){ %>
         <% blogs.forEach( blog => { %>
@@ -31,10 +20,7 @@
         <% }) %>
       <% } %>
     </div>
-  </div>
-
-  <section>
-
   </section>
+  <%- include ('./partials/footer.ejs') %>
 </body>
 </html>

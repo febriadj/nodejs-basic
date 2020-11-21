@@ -2,16 +2,18 @@
   "name": "node-basic",
   "version": "1.0.0",
   "description": "learn nodejs and expressjs",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node app.js"
   },
   "author": "febriadj",
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.5",
     "express": "^4.17.1",
-    "lodash": "^4.17.20"
+    "lodash": "^4.17.20",
+    "mongoose": "^5.10.15",
+    "morgan": "^1.10.0"
   }
 }
