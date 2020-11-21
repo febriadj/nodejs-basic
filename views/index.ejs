@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/views/css/index.css">
+  <title>Febriadj | <%= title %></title>
+</head>
+<body>
+  <nav>
+    <div id="header">
+      <div id="site-title">
+        <a href="/">Febriadj Blog</a>
+      </div>
+      <div id="menu">
+        <a href="/">Blogs</a>
+        <a href="/about">About</a>
+        <a href="/blogs/create">Create Blog</a>
+      </div>
+    </div>
+  </nav>
+
+  <div id="blog">
+    <div id="blog-wrap">
+      <% if (blogs.length > 0){ %>
+        <% blogs.forEach( blog => { %>
+          <div class="blog-item">
+            <h2><%= blog.title %></h1>
+            <p><%= blog.desc %></p>
+          </div>
+        <% }) %>
+      <% } %>
+    </div>
+  </div>
+
+  <section>
+
+  </section>
+</body>
+</html>
