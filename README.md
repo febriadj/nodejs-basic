@@ -18,7 +18,7 @@ Get, Post, Delete Request adalah permintaan HTTP umum yang digunakan untuk membu
 https://codeforgeek.com/handle-get-post-request-express-4/
 
 ### ```View Engine```
-view engine atau template engine sebagai sebuah (komponen) perangkat lunak yang dirancang untuk menggabungkan sebuah template (contoh) dengan data untuk dijadikan dokumen hasil.
+View engine atau template engine sebagai sebuah (komponen) perangkat lunak yang dirancang untuk menggabungkan sebuah template (contoh) dengan data untuk dijadikan dokumen hasil.
 Disini saya memakai EJS untuk templatingnya.
 <br>
 https://bertzzie.com/knowledge/serverside-nodejs/Templating.html
