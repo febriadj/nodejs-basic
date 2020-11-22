@@ -15,6 +15,10 @@ section {
 .blog-item {
   margin: 20px 0;
 }
+.blog-item a {
+  color: #232323;
+  text-decoration: none;
+}
 #form-create {
   display: flex;
   justify-content: center;
@@ -34,4 +38,7 @@ form button {
   padding: 15px;
   border: none;
   cursor: pointer;
+}
+#blogs-body {
+  margin: 40px 0 0 0;
 }

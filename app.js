@@ -21,56 +21,16 @@ app.set('view engine', 'ejs');
 
 // middleware files
 app.use('/public/css', express.static('public/css'));
+app.use(express.urlencoded({ extended: true }));
 app.use(morgan('tiny'));
-
-// mongo sandbox routes
-app.get('/add-blog', (req, res) => {
-  const blog = new Blog({
-    title: 'second blog',
-    desc: 'this is my second blog'
-  });
-
-  blog.save()
-    .then((result) => {
-      res.send(result);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-
-app.get('/all-blogs', (req, res) => {
-  Blog.find()
-    .then((result) => {
-      res.send(result);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-
-app.get('/single-blog', (req, res) => {
-  Blog.findById('5fb964f8507a1b1d60dbc7f9')
-    .then((result) => {
-      res.send(result);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
 
 // routes
 app.get('/', (req, res) => {
-  const blogs = [
-    {title: 'git push rejected', desc: 'bagaimana cara mengatasi git push rejected'},
-    {title: 'nodejs dan expressjs', desc: 'belajar dasar nodejs dan expressjs'},
-    {title: '10 bahasa pemograman terpopuler', desc: '10 bahasa pemograman terpopuler tahun 2020'}
-  ]
-  res.render('index', {title: 'Blogs', blogs: blogs});
+  res.redirect('/blogs');
 });
 
 app.get('/home', (req, res) => {
-  res.redirect('/');
+  res.redirect('/blogs');
 });
 
 app.get('/about', (req, res) => {
@@ -84,6 +44,50 @@ app.get('/about-me', (req, res) => {
 app.get('/blogs/create', (req, res) => {
   res.render('create', {title: 'Create a New Blog'});
 });
+
+// mongo sandbox routes
+app.get('/blogs', (req, res) => {
+  Blog.find().sort({ createdAt: -1 })
+    .then((result) => {
+      res.render('index', {title: 'All Blogs', blogs: result});
+    })
+    .catch((err) => {
+      console.log(err);
+    })
+})
+
+app.post('/blogs', (req, res) => {
+  const blog = new Blog(req.body);
+  blog.save()
+    .then((result) => {
+      res.redirect('/blogs');
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
+app.get('/blogs/:id', (req, res) => {
+  const id = req.params.id;
+  Blog.findById(id)
+    .then((result) => {
+      res.render('details', {title: 'Blogs Detail', blog: result})
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
+app.delete('/blogs/:id', (req, res) => {
+  const id = req.params.id;
+  Blog.findByIdAndDelete(id)
+    .then((result) => {
+      res.json({ redirect: '/blogs' });
+    })
+    .catch((err) => {
+      console.log(err);
+    })
+})
 
 app.use((req, res) => {
   res.status(404).render('not-found', {title: '404 Not Found'});
