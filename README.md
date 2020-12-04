@@ -1,33 +1,33 @@
 # Node js dan Express js basic
-Belajar materi dasar <b>Node js</b> dan <b>Express js</b><br>
+Belajar materi dasar Node js dan Express js<br>
 CRASH COURSE!!
 
-### ```File System```
+## File System
 Pada Nodejs, terdapat modul file system (fs) yang memungkinkan kita untuk mengakses file system. Modul ini sudah ada di Nodejs, sehingga kita tidak perlu menginstalnya melalui npm
 <br>
-https://www.petanikode.com/nodejs-file/
+[Sumber](https://www.petanikode.com/nodejs-file/)
 
-### ```Middleware```
+## Middleware
 Middleware pada dasarnya adalah fungsi yang menerima request dan response objek dan fungsi next. Setiap middleware dapat memutuskan untuk merespons dengan menggunakan objek response atau meneruskan aliran ke fungsi berikutnya dengan memanggil callback next.
 <br>
-https://code.tutsplus.com/id/tutorials/build-a-complete-mvc-website-with-expressjs--net-34168
+[Sumber](https://code.tutsplus.com/id/tutorials/build-a-complete-mvc-website-with-expressjs--net-34168)
 
-### ```Get, Post, Delete Request```
+## Get, Post, Delete Request
 Get, Post, Delete Request adalah permintaan HTTP umum yang digunakan untuk membuat REST API. Kedua panggilan ini dimaksudkan untuk beberapa tujuan khusus.
 <br>
-https://codeforgeek.com/handle-get-post-request-express-4/
+[Sumber](https://codeforgeek.com/handle-get-post-request-express-4/)
 
-### ```View Engine```
+## View Engine
 View engine atau template engine sebagai sebuah (komponen) perangkat lunak yang dirancang untuk menggabungkan sebuah template (contoh) dengan data untuk dijadikan dokumen hasil.
 Disini saya memakai EJS untuk templatingnya.
 <br>
-https://bertzzie.com/knowledge/serverside-nodejs/Templating.html
+[Sumber](https://bertzzie.com/knowledge/serverside-nodejs/Templating.html)
 
-### ```Express Route```
+## Express Route
 Routing mengacu pada menentukan bagaimana aplikasi merespons permintaan klien ke titik akhir tertentu, yang merupakan URI (atau jalur) dan metode permintaan HTTP tertentu (GET, POST, dan sebagainya).
 <br>
-https://expressjs.com/en/starter/basic-routing.html
-### ```MVC```
+[Sumber](https://expressjs.com/en/starter/basic-routing.html)
+## MVC
 MVC adalah sebuah metode untuk membuat sebuah aplikasi dengan memisahkan data dari tampilan dan cara bagaimana memprosesnya. Dalam implementasinya kebanyakan framework dalam aplikasi web adalah berbasis arsitektur MVC.
 <br>
-https://id.wikipedia.org/wiki/MVC
+[Sumber](https://id.wikipedia.org/wiki/MVC)
