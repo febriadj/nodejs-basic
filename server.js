@@ -32,7 +32,7 @@ const server = http.createServer((req, res)=> {
       path += 'not-found.ejs';
       res.statusCode = 404;
       break;
-  }
+  };
   
   // read the html file and display it on the screen
   fs.readFile(path, (err, data) => {
@@ -40,11 +40,11 @@ const server = http.createServer((req, res)=> {
       console.log(err);
       res.end();
     } else res.end(data);
-  })
-})
+  });
+});
 
 // running the server on port 3000
 const port = process.env.PORT || 3000;
 server.listen(port, () => {
   console.log(`listening for request on port ${port}`);
-})
+});
