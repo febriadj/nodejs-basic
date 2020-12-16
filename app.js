@@ -5,24 +5,12 @@ const mongoose = require('mongoose');
 const Blog = require('./models/blog');
 const { result } = require('lodash');
 
-// koneksi ke database
-const dbURI = 'mongodb+srv://febriadj:dbfebri26@nodetuts.z7vkh.mongodb.net/node-tuts?retryWrites=true&w=majority';
-mongoose.connect(dbURI, { useUnifiedTopology: true, useNewUrlParser: true })
-  .then((result) => {
-    app.listen(3000, 'localhost', () => {
-      console.log('server running on port 3000');
-    })
-  })
-  .catch((err) => {
-    console.log(err)
-  });
-
 app.set('view engine', 'ejs');
 
 // middleware files
 app.use('/public/css', express.static('public/css'));
 app.use(express.urlencoded({ extended: true }));
-app.use(morgan('tiny'));
+app.use(morgan('dev'));
 
 // routes
 app.get('/', (req, res) => {
@@ -34,7 +22,9 @@ app.get('/home', (req, res) => {
 });
 
 app.get('/about', (req, res) => {
-  res.render('about', {title: 'About'})
+  res.render('about', {
+    title: 'About'
+  })
 });
 
 app.get('/about-me', (req, res) => {
@@ -42,7 +32,9 @@ app.get('/about-me', (req, res) => {
 });
 
 app.get('/blogs/create', (req, res) => {
-  res.render('create', {title: 'Create a New Blog'});
+  res.render('create', {
+    title: 'Create a New Blog'
+  });
 });
 
 // mongo sandbox routes
@@ -90,5 +82,20 @@ app.delete('/blogs/:id', (req, res) => {
 })
 
 app.use((req, res) => {
-  res.status(404).render('not-found', {title: '404 Not Found'});
+  res.status(404).render('not-found', {
+    title: '404 Not Found'
+  });
 });
+
+// koneksi ke database
+const dbURI = 'mongodb+srv://febriadj:dbfebri26@nodetuts.z7vkh.mongodb.net/node-tuts?retryWrites=true&w=majority';
+mongoose.connect(dbURI, { useUnifiedTopology: true, useNewUrlParser: true })
+  .then((result) => {
+    const port = process.env.PORT || 3000;
+    app.listen(port, 'localhost', () => {
+      console.log(`server running on port ${port}`);
+    })
+  })
+  .catch((err) => {
+    console.log(err)
+  });
