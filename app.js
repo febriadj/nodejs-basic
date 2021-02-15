@@ -88,7 +88,7 @@ app.use((req, res) => {
 });
 
 // koneksi ke database
-const dbURI = 'mongodb+srv://febriadj:dbfebri26@nodetuts.z7vkh.mongodb.net/node-tuts?retryWrites=true&w=majority';
+const dbURI = 'mongodb+srv://<username>:<password>@nodetuts.z7vkh.mongodb.net/node-tuts?retryWrites=true&w=majority';
 mongoose.connect(dbURI, { useUnifiedTopology: true, useNewUrlParser: true })
   .then((result) => {
     const port = process.env.PORT || 3000;
